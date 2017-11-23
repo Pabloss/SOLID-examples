@@ -1,18 +1,23 @@
 <?php
 declare(strict_types=1);
 /**
- * DataProviderAndRenderer class is "wrong" case of SRP
+ * DataProvider class is "wrong" case of SRP
  * because:
  *
- * When we changes e.g. source of data we should change DataProviderAndRenderer class.
- * And when we're changing html structure we should change DataProviderAndRenderer class too.
+ * The names are important. Their are explaining e.g purpose of the code.
+ *
+ *      So when we Provide the Data we should only Provide it and not render
+ *      (if, of course, we don't treat tags as data)
+ *
+ * When we changes e.g. source of data we should change DataProvider class.
+ * And when we're changing html structure we should change DataProvider class too.
  *
  * Then in extreme case when whole application contains classes with maximum levels of responsibility,
  * all even smallest change would (in high chance) propagate all over the application. And that case
  * is hardest to maintain when we "afraid" to touch the code because that "chain reaction effect"
  *
  */
-class DataProviderAndRenderer
+class DataProvider
 {
     private $data = [];
 
@@ -67,5 +72,3 @@ class Renderer
         return $result;
     }
 }
-
-
