@@ -49,6 +49,15 @@ abstract class Beverage
         $this->chocolate = $chocolate;
     }
 
+    /**
+     * This example comes from "Head First! Design Patterns"
+     * - the book contains Java code but example below is a try of translating it into PHP
+     *
+     * This is the center of breaking of this OCP principle
+     * Every change of addition cost will force the method below body change.
+     * Providing next new additions also will force the change of the method.
+     * Some kind of beverage are not suitable to all additions.
+     */
     public function cost(): float
     {
         $cost = 0.0;
