@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-class Beverage
+namespace SOLIDExamples\OpenClosePrinciple;
+
+abstract class Beverage
 {
     private $description;
     private $milk;
@@ -10,7 +12,7 @@ class Beverage
 
     public function description(string $description)
     {
-        if(empty($description)){
+        if (empty($description)) {
             return $this->description;
         }
 
@@ -45,5 +47,23 @@ class Beverage
     public function addChocolate(bool $chocolate): void
     {
         $this->chocolate = $chocolate;
+    }
+
+    public function cost(): float
+    {
+        $cost = 0.0;
+        if ($this->milk) {
+            $cost += 1.2;
+        }
+
+        if ($this->chocolate) {
+            $cost += 2.1;
+        }
+
+        if ($this->withSoyMilk()) {
+            $cost += 3.1;
+        }
+
+        return $cost;
     }
 }
