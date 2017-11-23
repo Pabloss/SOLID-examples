@@ -1,0 +1,15 @@
+{
+    "name": "pavulon/solid-examples",
+    "authors": [
+        {
+            "name": "Paweł Zimnowodzki",
+            "email": "pawel.zimnowodzki@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SOLIDExamples\\": "src"
+        }
+    }
+}
