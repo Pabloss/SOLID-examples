@@ -52,11 +52,11 @@ abstract class Beverage
     public function cost(): float
     {
         $cost = 0.0;
-        if ($this->milk) {
+        if ($this->withMilk()) {
             $cost += 1.2;
         }
 
-        if ($this->chocolate) {
+        if ($this->withChocolate()) {
             $cost += 2.1;
         }
 
