@@ -4,7 +4,7 @@
         verbose="true"
 >
     <testsuites>
-        <testsuite name="tic-tac-toe">
+        <testsuite name="solid-examples">
             <directory>test</directory>
         </testsuite>
     </testsuites>
