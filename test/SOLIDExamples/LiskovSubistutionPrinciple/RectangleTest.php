@@ -7,6 +7,13 @@ use PHPUnit\Framework\TestCase;
 use SOLIDExamples\LiskovSubstitutionPrinciple\Rectangle;
 use SOLIDExamples\LiskovSubstitutionPrinciple\Square;
 
+
+/**
+ * Liskov Substitution Principle is the stronger than rule than only simple inheritance.
+ * It requests to copy BEHAVIOR of base classes to inherited from them. Inheritance should be somehow "transparent" i.e.
+ * in example below we could not be informed that collection is included by some "quire" objects as Squares. In other words:
+ * we could not be forced to prepare specific conditions for more specific objects of the same base class.
+ */
 class RectangleTest extends TestCase
 {
     /**
