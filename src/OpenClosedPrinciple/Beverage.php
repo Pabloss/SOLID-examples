@@ -54,9 +54,14 @@ abstract class Beverage
      * - the book contains Java code but example below is a try of translating it into PHP
      *
      * This is the center of breaking of this OCP principle
-     * Every change of addition cost will force the method below body change.
-     * Providing next new additions also will force the change of the method.
-     * Some kind of beverage are not suitable to all additions.
+     * These are main reasons/features that forces not to extend existed code but change the code to match new requirements
+     *
+     * 1. Every change of addition cost will force the method below body change.
+     * 2. Providing next new additions also will force the change of the method.
+     * 3. Some kind of beverage are not suitable to all additions.
+     *
+     * That's why the "the module has been given a well-defined, stable description" explaining was broken by solution below -
+     * means it is not CLOSED.
      */
     public function cost(): float
     {
