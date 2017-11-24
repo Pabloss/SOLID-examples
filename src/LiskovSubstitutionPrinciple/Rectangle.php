@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace SOLIDExamples\LiskovSubistutionPrinciple;
+namespace SOLIDExamples\LiskovSubstitutionPrinciple;
 
 class Rectangle
 {
@@ -18,11 +18,13 @@ class Rectangle
         $this->height = $height;
     }
 
-    public static function getInstance($x, $y, $width, $height){
+    public static function getInstance($x, $y, $width, $height)
+    {
         return new self($x, $y, $width, $height);
     }
 
-    public function getX(){
+    public function getX()
+    {
         return $this->x;
     }
 
@@ -41,7 +43,8 @@ class Rectangle
         return $this->height;
     }
 
-    public function getArea(){
+    public function getArea()
+    {
         return $this->height * $this->width;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace SOLIDExamples\LiskovSubistutionPrinciple;
+namespace SOLIDExamples\LiskovSubstitutionPrinciple;
 
 class Square extends Rectangle
 {
@@ -13,8 +13,9 @@ class Square extends Rectangle
         $this->size = $size;
     }
 
-    public static function getInstance($x, $y, $width, $height){
-        return new self($x, $y, $width);
+    public static function getInstance($x, $y, $width, $height)
+    {
+        return new self($x, $y, $height);
     }
 
     public function getWidth()
@@ -27,7 +28,8 @@ class Square extends Rectangle
         return $this->size;
     }
 
-    public function getArea(){
+    public function getArea()
+    {
         return $this->size * $this->size;
     }
 }
