@@ -9,6 +9,7 @@ abstract class Beverage
     private $milk;
     private $soyMilk;
     private $chocolate;
+    private $whippedCream;
 
     public function description(string $description)
     {
@@ -47,6 +48,16 @@ abstract class Beverage
     public function addChocolate(bool $chocolate): void
     {
         $this->chocolate = $chocolate;
+    }
+
+    public function withWhippedCream(): bool
+    {
+        return $this->whippedCream;
+    }
+
+    public function addWhippedCream(bool $whippedCream): bool
+    {
+        $this->whippedCream = $whippedCream;
     }
 
     /**
