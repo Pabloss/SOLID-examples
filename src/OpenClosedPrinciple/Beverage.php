@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace SOLIDExamples\OpenClosePrinciple;
 
-abstract class Beverage
+abstract class Beverage //Solution that broke OCP
 {
     private $description;
     private $milk;
@@ -92,3 +92,33 @@ abstract class Beverage
         return $cost;
     }
 }
+
+
+abstract class Beverage //Solution that matches OCP
+{
+    protected $description = "undefined";
+
+    public function description(): string
+    {
+        return $this->description;
+    }
+
+    abstract public function cost();
+}
+
+/**
+ * Why it is a good solution (BTW it uses Decorator Pattern)?
+ *
+ * Because:
+ * When I need to add a new Ingredient I don't need to CHANGE EXISTED CODE
+ * only need to ADD a new code with convention of previous already existed decorators (in this example, of course).
+ *
+ * e.g.
+ *
+ * Espresso + 2 x Chocolate + Milk
+ * $coffee = new Espresso();
+ * $chocolate1 = new Chocolate($coffee);
+ * $chocolate2 = new Chocolate($chocolate1);
+ * $milk = new Milk($chocolate2);
+ *
+ */
