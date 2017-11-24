@@ -6,10 +6,13 @@
             "email": "pawel.zimnowodzki@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^6.4"
+    },
     "autoload": {
         "psr-4": {
-            "SOLIDExamples\\": "src"
+            "SOLIDExamples\\": "src",
+            "SOLIDExamplesTest\\": "test "
         }
     }
 }
